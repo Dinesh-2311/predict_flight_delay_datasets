@@ -7,9 +7,13 @@ This project predicts flight delays using historical flight and weather data. Th
 **Key Features**
 
 Data Processing: Handling historical weather and flight data, cleaning, and preprocessing for modeling.
+
 Machine Learning Model: Training predictive models to estimate flight delays.
+
 Uncertainty Quantification: Employing probabilistic approaches to capture the effects of weather variability on predictions.
+
 Visualization: Generating plots to explain model performance and uncertainty effects.
+
 Report Generation: Documenting findings, including potential improvements and key insights.
 
 **Project Structure**
@@ -17,22 +21,27 @@ Report Generation: Documenting findings, including potential improvements and ke
 **Data Loading & Exploration**
 
 Reading and understanding historical flight and weather datasets.
+
 Exploratory data analysis (EDA) to identify key features affecting flight delays.
 
 **Preprocessing**
 
 **Data cleaning:** Handling missing values and anomalies.
+
 **Feature engineering:** Creating meaningful input features.
+ 
  Normalization or scaling as required.
 
 **Modeling**
 
 Baseline model implementation.
+
 Advanced modeling using Bayesian inference or Monte Carlo methods to include uncertainty quantification.
 
 **Evaluation**
 
 Assessing model performance using metrics like RMSE, MAE, or others.
+
 Visualizing predictions with confidence intervals.
 
 **Visualization**
@@ -53,9 +62,13 @@ Interpreting the results, model strengths, and areas for improvement.
 **Libraries**
 
 Data Analysis & Manipulation: pandas, numpy
+
 Visualization: matplotlib, seaborn
+
 Machine Learning: scikit-learn
+
 Probabilistic Modeling: PyMC3 or TensorFlow Probability
+
 Other Utilities: scipy, statsmodels
 
 **To install all required packages, run:**
@@ -63,8 +76,8 @@ Other Utilities: scipy, statsmodels
   **pip install -r requirements.txt**
     
 **Usage Instructions**
-Clone the Repository
 
+Clone the Repository
 
 **Run the Notebook Open the Jupyter Notebook:****
 
@@ -75,11 +88,15 @@ Clone the Repository
 **Deliverables**
 
 Code: Fully functional Jupyter Notebook.
+
 Visualization: Figures showing model performance and uncertainty.
+
 Report: Discussion of results, uncertainty quantification, and improvement recommendations.
 
 **Future Work**
 
 Enhance feature engineering with real-time data streams.
+
 Experiment with additional probabilistic models for improved uncertainty quantification.
+
 Integrate the model into a web-based decision-support system for real-world deployment.
