@@ -15,14 +15,15 @@ Report Generation: Documenting findings, including potential improvements and ke
 **Project Structure**
 
 **Data Loading & Exploration**
+
 Reading and understanding historical flight and weather datasets.
 Exploratory data analysis (EDA) to identify key features affecting flight delays.
 
 **Preprocessing**
 
-Data cleaning: Handling missing values and anomalies.
-Feature engineering: Creating meaningful input features.
-Normalization or scaling as required.
+**Data cleaning:** Handling missing values and anomalies.
+**Feature engineering:** Creating meaningful input features.
+ Normalization or scaling as required.
 
 **Modeling**
 
