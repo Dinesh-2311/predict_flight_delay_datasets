@@ -1,64 +1,74 @@
-**Flight Delays Prediction Model**
+**Flight Delay Prediction Project**
 
-**Overview:**
+**Project Overview**
 
-The following project predicts flight delays using historic data of flights and weather. The model will use machine learning techniques to make predictions if a given flight will be late depending on the weather conditions, flight schedule, and the airport where the flight took off from originally. It builds two models: Random Forest and XGBoost. Additionally, it also evaluates the uncertainty of the predictions using Monte Carlo simulations.
+This project predicts flight delays using historical flight and weather data. The focus is on building a machine learning model that incorporates probabilistic techniques such as Bayesian methods or Monte Carlo simulations to account for uncertainty caused by weather conditions.
 
-**Data Sources:**
+**Key Features**
 
-The datasets used for training and evaluation are as follows:
+Data Processing: Handling historical weather and flight data, cleaning, and preprocessing for modeling.
+Machine Learning Model: Training predictive models to estimate flight delays.
+Uncertainty Quantification: Employing probabilistic approaches to capture the effects of weather variability on predictions.
+Visualization: Generating plots to explain model performance and uncertainty effects.
+Report Generation: Documenting findings, including potential improvements and key insights.
 
-Flight Arrivals Data: Detailed_Statistics_Arrivals.csv - This includes the historical data related to flight arrivals. Flight Departures Data: Detailed_Statistics_Departures.csv - This consists of historical data about flight departures. Weather Data for Arrivals: weather_data_arrivals.csv - Weather data for arrival flights. Weather Data for Departures: weather_data_depature.csv - Weather data for departure flights.
+**Project Structure**
 
-**Overview of Steps**:
+**Data Loading & Exploration**
+Reading and understanding historical flight and weather datasets.
+Exploratory data analysis (EDA) to identify key features affecting flight delays.
 
-**Data Cleaning & Preprocessing:**
+**Preprocessing**
+Data cleaning: Handling missing values and anomalies.
+Feature engineering: Creating meaningful input features.
+Normalization or scaling as required.
 
-Cleaned column names. Converted date columns into the right datetime format. Merged flight data with weather data by date. Handled missing values by doing a forward fill.
+**Modeling**
+Baseline model implementation.
+Advanced modeling using Bayesian inference or Monte Carlo methods to include uncertainty quantification.
 
-**Feature Engineering:**
+**Evaluation**
+Assessing model performance using metrics like RMSE, MAE, or others.
+Visualizing predictions with confidence intervals.
 
-The new features created are temp_deviation, which is the difference between temperature and precipitation, and high_wind, which is an indicator if wind speed surpasses 15. The categorical features such as carrier code, origin airport, and destination airport are encoded using Label Encoding. The date column is used to extract additional features day of the week and month.
+**Visualization**
+Displaying model predictions, actual delays, and uncertainty bounds.
 
-**Target Variable**:
+**Results and Discussion**
+Interpreting the results, model strengths, and areas for improvement.
 
-A binary target variable is created, is_delayed, where 1- flight delayed and 0- it was not.
+**Requirements**
+**Languages and Tools**
+1. Python 3.x
+2. Jupyter Notebook
+   
+**Libraries**
 
-**Model Building**:
+Data Analysis & Manipulation: pandas, numpy
+Visualization: matplotlib, seaborn
+Machine Learning: scikit-learn
+Probabilistic Modeling: PyMC3 or TensorFlow Probability
+Other Utilities: scipy, statsmodels
 
-Split the dataset into training and testing sets, 80% for training and 20% for testing. The work involved training two machine learning models: Random Forest and XGBoost.
+**To install all required packages, run:**
 
-**Model Evaluation:**
+  **pip install -r requirements.txt**
+    
+**Usage Instructions**
+Clone the Repository
 
-The performance of the model was then evaluated based on the classification report, ROC curve, and calibration curve. Plotted ROC and calibration curves were used to evaluate the model performance. Uncertainty Evaluation:
 
-Applied Monte Carlo simulations to quantify the uncertainty of the predictions by adding random noise to the weather features and measuring changes in the predicted probabilities.
+**Run the Notebook Open the Jupyter Notebook:****
 
-**Saving the Model:**
+**jupyter notebook PREDICT_FLIGHT_DELAY.ipynb**
+**follow the Notebook Sections** Execute each cell sequentially for step-by-step implementation.   
 
-The models are saved through joblib for both RandomForest and XGBoost. The uncertainty results-mean probabilities and their standard deviations-are saved into a CSV file. Files
+**Deliverables**
+Code: Fully functional Jupyter Notebook.
+Visualization: Figures showing model performance and uncertainty.
+Report: Discussion of results, uncertainty quantification, and improvement recommendations.
 
-random_forest_model.pkl: Trained Random Forest model. xgboost_model.pkl: Trained XGBoost model. uncertainty_results.csv: A CSV file including the result of uncertainty evaluation via Monte Carlo simulations.
-
-**Dependencies**:
-
-**this project requires the following libraries to be installed:
-****
-
-**pandas numpy matplotlib seaborn sklearn xgboost joblib**
-
-****You can install these dependencies using pip: ** pip install pandas numpy matplotlib seaborn scikit-learn xgboost joblib**
-
-**Running Code**
-
-Make sure the datasets Detailed_Statistics_Arrivals.csv, Detailed_Statistics_Departures.csv, weather_data_arrivals.csv, and weather_data_depature.csv can be found in the defined pathways in the code. If another directory is used, the pathway must be updated in the code.
-
-**Run the script in your Python environment of choice.**
-
-This will train and evaluate the models with the results being saved in respective files named random_forest_model.pkl, xgboost_model.pkl, and uncertainty_results.csv.
-
-The performance of the Random Forest is evaluated by plotting the ROC curve and calibration curve.
-
-**Conclusion**:
-
-The project explains the prediction of flight delays using techniques from machine learning. It evaluates the performance of the models, and the uncertainty in predictions will be quantified using Monte Carlo simulations. Such results have several applications in decision-making for airlines and passengers.
+**Future Work**
+Enhance feature engineering with real-time data streams.
+Experiment with additional probabilistic models for improved uncertainty quantification.
+Integrate the model into a web-based decision-support system for real-world deploymen
