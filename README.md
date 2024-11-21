@@ -19,26 +19,33 @@ Reading and understanding historical flight and weather datasets.
 Exploratory data analysis (EDA) to identify key features affecting flight delays.
 
 **Preprocessing**
+
 Data cleaning: Handling missing values and anomalies.
 Feature engineering: Creating meaningful input features.
 Normalization or scaling as required.
 
 **Modeling**
+
 Baseline model implementation.
 Advanced modeling using Bayesian inference or Monte Carlo methods to include uncertainty quantification.
 
 **Evaluation**
+
 Assessing model performance using metrics like RMSE, MAE, or others.
 Visualizing predictions with confidence intervals.
 
 **Visualization**
+
 Displaying model predictions, actual delays, and uncertainty bounds.
 
 **Results and Discussion**
+
 Interpreting the results, model strengths, and areas for improvement.
 
 **Requirements**
+
 **Languages and Tools**
+
 1. Python 3.x
 2. Jupyter Notebook
    
@@ -61,14 +68,17 @@ Clone the Repository
 **Run the Notebook Open the Jupyter Notebook:****
 
 **jupyter notebook PREDICT_FLIGHT_DELAY.ipynb**
+
 **follow the Notebook Sections** Execute each cell sequentially for step-by-step implementation.   
 
 **Deliverables**
+
 Code: Fully functional Jupyter Notebook.
 Visualization: Figures showing model performance and uncertainty.
 Report: Discussion of results, uncertainty quantification, and improvement recommendations.
 
 **Future Work**
+
 Enhance feature engineering with real-time data streams.
 Experiment with additional probabilistic models for improved uncertainty quantification.
-Integrate the model into a web-based decision-support system for real-world deploymen
+Integrate the model into a web-based decision-support system for real-world deployment.
